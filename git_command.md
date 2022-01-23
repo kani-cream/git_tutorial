@@ -62,6 +62,9 @@ $ git branch -a
 ## ブランチの作成 ( ローカルリポジトリにブランチを作成する、HEADは移動しない。 )
 $ git branch [ブランチ名]
 
+## リモートブランチからローカルブランチを作成する
+$ git branch master origin/master 
+
 ## 現在のHEADを知る方法
 $ git log --oneline --decorate
 87bf06c (HEAD -> main, origin/main, feature) add git remote show 追記
