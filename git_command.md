@@ -91,3 +91,35 @@ $ git merge origin/master
 * conflict:コンフリクト
   * 同じファイルの同じ行に対して異なる編集を行ったとき、<br>
   どちらの更新を優先すればいいのかGitがわからないときに発生する。
+
+## コンフリクトが発生したとき
+```
+> git merge feature
+Auto-merging index.html
+CONFLICT (content): Merge conflict in index.html
+
+> cat index.html
+...
+<<<< HEAD
+<p>git addについて学ぶ</p>
+====
+<p>gitcommitを知る</p>
+>>>> feature
+...
+## HEADから====までが現在のブランチに記載されている内容
+## ====からfeatureまでがfeatureブランチに記載されている内容
+## HEADの内容をmasterとする場合は、HEADの内容のみを記載する。
+## featureの内容を残す場合は、featureの内容のみを記載する。
+## どちらも残す場合は、HEADの内容とfeatureの内容を記載する。
+## 残す内容が決まったら、Gitが記載した<<<< HEADから>>>featureを削除して保存する。
+
+> git add index.html
+> git commit
+## 変更分をコミットして完了
+```
+
+## コンフリクトを起きないようにするには
+* 複数人で同じファイルを更新しない
+* pull, mergeする前に変更中の状態をなくす（commitやstashをしておく）
+* pullするときは、pullするブランチに移動してからpullする
+* コンフリクトしても慌てない
