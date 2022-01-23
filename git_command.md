@@ -33,3 +33,13 @@ $ git remote のより詳しい情報を見る。<br>
   * リモートブランチ
   * git pullの挙動
   * git pushの挙動
+
+## $ git remote rename / rm
+$ git remote rename リモート名を変更する
+```
+$ git remote rename [旧リモート名] [新リモート名]
+```
+$ git remote rm リモートを削除する
+```
+$ git remote rm [リモート名]
+```
