@@ -88,4 +88,6 @@ $ git merge origin/master
   * 変更されていないmasterブランチから新しくhotfixブランチを作成してhotfixブランチの変更分をmasterブランチにマージするとき、masterのポインタが前に進むだけ。
 * Auto Merge: 基本的なマージ
   * masterブランチとfeatureブランチでそれぞれコミットが存在するとき、git merge featureでmasterにfeatureブランチの変更分を取り込んだ時、masterブランチにマージコミットという新しいコミットファイルが作成される。<br>マージコミットファイルには、親を２つ持つことになる(masterコミットとfeatureコミット)。
-* conflict:
+* conflict:コンフリクト
+  * 同じファイルの同じ行に対して異なる編集を行ったとき、<br>
+  どちらの更新を優先すればいいのかGitがわからないときに発生する。
