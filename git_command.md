@@ -123,3 +123,17 @@ CONFLICT (content): Merge conflict in index.html
 * pull, mergeする前に変更中の状態をなくす（commitやstashをしておく）
 * pullするときは、pullするブランチに移動してからpullする
 * コンフリクトしても慌てない
+
+## $ git branch -m/-d branchのリネームと削除
+```
+## ブランチ名の変更
+$ git branch -m [ブランチ名]
+$ git branch -m new_branch
+
+## ブランチの削除
+$ git branch -d [ブランチ名]
+$ git branch -d feature
+
+### 強制削除
+$ git branch -D [ブランチ名]
+```
