@@ -50,3 +50,20 @@ $ git remote rm [リモート名]
 * ブランチとは、コミットを示すポインタ
 * HEADは、作業しているブランチを示している
 * コミットを示すポインタなので、ブランチの作成・切替・マージが他のバージョン管理ツールに比べて高速 (ポインタを切り替えるだけ)
+
+## $ git branch ブランチの一覧/ブランチの作成
+```
+## ローカルリポジトリのブランチ一覧を表示
+$ git branch
+
+## remotesブランチも表示させる
+$ git branch -a
+
+## ブランチの作成 ( ローカルリポジトリにブランチを作成する、HEADは移動しない。 )
+$ git branch [ブランチ名]
+
+## 現在のHEADを知る方法
+$ git log --oneline --decorate
+87bf06c (HEAD -> main, origin/main, feature) add git remote show 追記
+...
+```
