@@ -136,4 +136,7 @@ $ git branch -d feature
 
 ### 強制削除
 $ git branch -D [ブランチ名]
+
+## リモートブランチの削除
+$ git push --delete origin [ブランチ名]
 ```
