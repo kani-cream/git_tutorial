@@ -63,7 +63,7 @@ $ git branch -a
 $ git branch [ブランチ名]
 
 ## リモートブランチからローカルブランチを作成する
-$ git branch master origin/master 
+$ git branch master origin/master
 
 ## 現在のHEADを知る方法
 $ git log --oneline --decorate
@@ -142,4 +142,5 @@ $ git branch -D [ブランチ名]
 
 ## リモートブランチの削除
 $ git push --delete origin [ブランチ名]
+$ git push origin :[ブランチ名]
 ```
