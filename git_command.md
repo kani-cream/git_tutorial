@@ -144,3 +144,16 @@ $ git branch -D [ブランチ名]
 $ git push --delete origin [ブランチ名]
 $ git push origin :[ブランチ名]
 ```
+
+## $ git rebase [ブランチ名] 履歴を整えよう
+$ git rebaseは、ブランチの起点となるコミットを別のコミットに移動すること<br>
+ブランチがmaster, featureの2つ存在していて、featureにmasterの更新分を反映させたいとしたとき、
+```
+$ git checkout feature
+$ git rebase master
+```
+さらに、featureの更新分をmasterにマージすることもできる
+```
+$ git checkout master
+$ git merge feature
+```
