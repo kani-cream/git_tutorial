@@ -22,6 +22,6 @@ $ git merge origin/master
 ```
 リモートリポジトリからローカルリポジトリに情報を取ってきて、更新分をワークツリーに反映させる。<br>
 
-#### <b> $ git pull の注意点<br>
+#### <b> $ git pull の注意点</b><br>
 ワークツリーにbranch master, hogeの2つが存在する。自分のワークツリーがmasterを向いているとき、hogeブランチの更新分を取得する「$ git pull origin hoge」を実行すると、ローカルリポジトリのremotes/origin/hogeに情報が格納され、現在のワークツリー「master」にhogeの更新分がマージされる。<br>
 hogeブランチに更新分を取得しようとしているにもかかわらず、意図せずmasterブランチに反映される可能性があるので、注意！！<br>
