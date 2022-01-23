@@ -157,3 +157,24 @@ $ git rebase master
 $ git checkout master
 $ git merge feature
 ```
+
+## $ git pull のマージ型とリベース型
+* マージ型 (マージコミットを残したいとき)
+```
+$ git pull [リモート] [ブランチ名]
+$ git pull origin master
+```
+* リベース型 (マージコミットを残したくないとき)
+```
+$ git pull --rebase [リモート] [ブランチ名]
+$ git pull --rebase origin master
+```
+  * 単純にリモートリポジトリの最新の内容をローカルに取り込むときに使う。
+
+#### $ git pullをリベース型に設定する方法
+```
+$ git config --global pull.rebase true
+
+## masterブランチでgit pullするときだけ リベース型にする
+$ git config branch.master.rebase true
+```
