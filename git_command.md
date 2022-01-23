@@ -76,3 +76,16 @@ $ git checkout [ブランチ名]
 ## ブランチの新規作成と切替
 $ git checkout -b [ブランチ名]
 ```
+
+## $ git merge 変更履歴をマージする
+```
+$ git merge [ブランチ名]
+$ git merge [リモート名/ブランチ名]
+$ git merge origin/master
+```
+#### マージの３種類
+* Fast Forward: 早送りマージ
+  * 変更されていないmasterブランチから新しくhotfixブランチを作成してhotfixブランチの変更分をmasterブランチにマージするとき、masterのポインタが前に進むだけ。
+* Auto Merge: 基本的なマージ
+  * masterブランチとfeatureブランチでそれぞれコミットが存在するとき、git merge featureでmasterにfeatureブランチの変更分を取り込んだ時、masterブランチにマージコミットという新しいコミットファイルが作成される。<br>マージコミットファイルには、親を２つ持つことになる(masterコミットとfeatureコミット)。
+* conflict:
