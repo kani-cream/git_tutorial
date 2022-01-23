@@ -67,3 +67,12 @@ $ git log --oneline --decorate
 87bf06c (HEAD -> main, origin/main, feature) add git remote show 追記
 ...
 ```
+
+## $ git checkout ブランチ切替
+```
+## ブランチの切り替え
+$ git checkout [ブランチ名]
+
+## ブランチの新規作成と切替
+$ git checkout -b [ブランチ名]
+```
